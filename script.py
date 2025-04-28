@@ -99,7 +99,6 @@ if show_insight:
     separator()
 
 if show_trend_chart:
-    # pick top 3 equipment by count
     top3 = df["Equipment"].value_counts().nlargest(3).index.tolist()
     trend_df = (
         df[df["Equipment"].isin(top3)]
